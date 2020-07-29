@@ -1,40 +1,65 @@
 /** @jsx jsx */
-import { jsx, Heading, Badge } from 'theme-ui'
-import PropTypes from 'prop-types'
+import { jsx, Heading, Badge, Grid } from 'theme-ui'
+import { graphql, useStaticQuery } from 'gatsby'
 import RenderIcons from '../../components/SocialIcons/RenderIcons'
 import CustomContainer from '../../components/Containers/CustomContainer'
 
-const MySkills = ({ delay, iconname, title, skills }) => (
-  <CustomContainer>
-    <ul sx={{ m: 0, p: 0, listStyleType: 'none' }}>
-      <li data-sal="slide-up" data-sal-delay={delay} data-sal-easing="ease">
-        <Heading
-          sx={{
-            fontSize: [2, 3],
-            mb: 1,
-          }}
-        >
-          <RenderIcons iconname={iconname} />
-          <span sx={{ ml: 2 }}>{title}</span>
-        </Heading>
+export default function MySkills() {
+  const { data } = useStaticQuery(graphql`
+    {
+      data: allMySkillsJson {
+        nodes {
+          delay
+          iconName
+          title
+          skills {
+            title
+          }
+        }
+      }
+    }
+  `)
 
-        {skills.map((skill) => (
-          <Badge key={skill.id} variant="outline" sx={{ m: [0, 1] }}>
-            <small sx={{ fontSize: ['8px', '10px'], color: 'black' }}>
-              {skill.title}
-            </small>
-          </Badge>
-        ))}
-      </li>
-    </ul>
-  </CustomContainer>
-)
+  return (
+    <Grid
+      sx={{
+        height: '100%',
+      }}
+    >
+      {data.nodes.map((item, i) => (
+        <CustomContainer>
+          <ul sx={{ m: 0, p: 0, listStyleType: 'none' }}>
+            <li
+              key={`my-skills-${item.title}-${i}`}
+              data-sal="slide-up"
+              data-sal-delay={item.delay}
+              data-sal-easing="ease"
+            >
+              <Heading
+                sx={{
+                  fontSize: [2, 3],
+                  mb: 1,
+                }}
+              >
+                <RenderIcons iconname={item.iconName} />
+                <span sx={{ ml: 2 }}>{item.title}</span>
+              </Heading>
 
-MySkills.propTypes = {
-  title: PropTypes.string.isRequired,
-  delay: PropTypes.number.isRequired,
-  iconname: PropTypes.string.isRequired,
-  skills: PropTypes.arrayOf(PropTypes.object).isRequired,
+              {item.skills.map((skill) => (
+                <Badge
+                  key={`MySkills-${i}`}
+                  variant="outline"
+                  sx={{ m: [0, 1] }}
+                >
+                  <small sx={{ fontSize: ['8px', '10px'], color: 'black' }}>
+                    {skill.title}
+                  </small>
+                </Badge>
+              ))}
+            </li>
+          </ul>
+        </CustomContainer>
+      ))}
+    </Grid>
+  )
 }
-
-export default MySkills

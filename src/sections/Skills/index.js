@@ -3,7 +3,6 @@ import { jsx, Box, Grid } from 'theme-ui'
 import PropTypes from 'prop-types'
 import SectionContainer from '../Container/SectionContainer'
 
-import { skillsDevInfo, mySkillsData } from '../../data/skills'
 import DeveloperInfo from './DeveloperInfo'
 import MySkills from './MySkills'
 import SectionHeading from '../Container/SectionHeading'
@@ -21,21 +20,11 @@ const Skills = ({ title }) => (
         }}
       >
         <Box>
-          {skillsDevInfo.map((data) => (
-            <DeveloperInfo key={data.id} {...data} />
-          ))}
+          <DeveloperInfo />
         </Box>
 
         <Box>
-          <Grid
-            sx={{
-              height: '100%',
-            }}
-          >
-            {mySkillsData.map((data) => (
-              <MySkills key={data.id} {...data} />
-            ))}
-          </Grid>
+          <MySkills />
         </Box>
       </Grid>
     </Box>
