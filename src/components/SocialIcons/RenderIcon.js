@@ -31,12 +31,12 @@ import awsIcon from '@iconify/icons-logos/aws'
 import herokuIcon from '@iconify/icons-logos/heroku'
 import googleCloud from '@iconify/icons-logos/google-cloud'
 import emailIcon from '@iconify/icons-entypo/email'
-import githubIcon from '@iconify/icons-logos/github-icon'
 import telegramIcon from '@iconify/icons-fa-brands/telegram'
 import icqIcon from '@iconify/icons-cib/icq'
 import gitIcon from '@iconify/icons-cib/git'
 import gitAlt from '@iconify/icons-fa-brands/git-alt'
 import webIcon from '@iconify/icons-ls/web'
+import githubIcon from '@iconify/icons-cib/github'
 
 addIcon('react', reactIcon)
 addIcon('gitAlt', gitAlt)

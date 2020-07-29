@@ -2,7 +2,7 @@
 import { jsx, Heading, Text, Flex } from 'theme-ui'
 import PropTypes from 'prop-types'
 import CustomContainer from '../../components/Containers/CustomContainer'
-import RenderIcons from '../../components/SocialIcons/RenderIcons'
+import RenderIcon from '../../components/SocialIcons/RenderIcon'
 
 const AboutMe = ({ delay, iconname, title, excerpt }) => (
   <Flex sx={{ flexDirection: 'column', flexWrap: 'wrap' }}>
@@ -16,7 +16,7 @@ const AboutMe = ({ delay, iconname, title, excerpt }) => (
           mb: 2,
         }}
       >
-        <RenderIcons iconname={iconname} />
+        <RenderIcon iconName={iconname} />
         <span sx={{ ml: 2 }}>{title}</span>
       </Heading>
 

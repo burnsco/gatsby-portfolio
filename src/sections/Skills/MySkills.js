@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx, Heading, Badge, Grid } from 'theme-ui'
 import { graphql, useStaticQuery } from 'gatsby'
-import RenderIcons from '../../components/SocialIcons/RenderIcons'
 import CustomContainer from '../../components/Containers/CustomContainer'
+import RenderIcon from '../../components/SocialIcons/RenderIcon'
 
 export default function MySkills() {
   const { data } = useStaticQuery(graphql`
@@ -41,7 +41,7 @@ export default function MySkills() {
                   mb: 1,
                 }}
               >
-                <RenderIcons iconname={item.iconName} />
+                <RenderIcon iconName={item.iconName} />
                 <span sx={{ ml: 2 }}>{item.title}</span>
               </Heading>
 

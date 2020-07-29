@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 /** @jsx jsx */
 import { jsx, Heading, Text, Flex } from 'theme-ui'
 import CustomContainer from '../../components/Containers/CustomContainer'
-import RenderIcons from '../../components/SocialIcons/RenderIcons'
+import RenderIcon from '../../components/SocialIcons/RenderIcon'
 
 export default function DeveloperInfo() {
   const { data } = useStaticQuery(graphql`
@@ -32,7 +32,7 @@ export default function DeveloperInfo() {
             mb: 2,
           }}
         >
-          <RenderIcons iconname={data.nodes[0].iconName} />
+          <RenderIcon iconName={data.nodes[0].iconName} />
           <span sx={{ ml: 2 }}>{data.nodes[0].title}</span>
         </Heading>
 

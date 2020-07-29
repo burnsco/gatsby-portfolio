@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'theme-ui'
 import Tippy from '@tippyjs/react'
 import PropTypes from 'prop-types'
-import "tippy.js/dist/tippy.css" // eslint-disable-line
+import 'tippy.js/dist/tippy.css' // eslint-disable-line
 
 // TODO fix social media icons to look nicer
 
@@ -24,7 +24,6 @@ const SocialLink = ({ name, url, top, children }) => (
         MozTransition: 'all 0.3s ease 0s',
         OTransition: 'all 0.3s ease 0s',
         transition: 'all 0.3s ease 0s',
-        border: '2px dashed rgba(169, 84,  3,1)',
         borderRadius: '50%',
         m: 2,
         color: 'muted',

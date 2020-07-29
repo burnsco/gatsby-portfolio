@@ -2,7 +2,7 @@
 import { jsx, Heading } from 'theme-ui'
 import PropTypes from 'prop-types'
 import CustomContainer from '../../components/Containers/CustomContainer'
-import RenderIcons from '../../components/SocialIcons/RenderIcons'
+import RenderIcon from '../../components/SocialIcons/RenderIcon'
 
 const RandomFacts = ({ delay, iconname, title, facts }) => (
   <CustomContainer>
@@ -12,7 +12,7 @@ const RandomFacts = ({ delay, iconname, title, facts }) => (
         mb: 2,
       }}
     >
-      <RenderIcons iconname={iconname} />
+      <RenderIcon iconName={iconname} />
       <span sx={{ ml: 2 }}>{title}</span>
     </Heading>
     <ul sx={{ m: 0, p: 0, fontSize: [0, 1, 2] }}>

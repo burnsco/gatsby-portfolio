@@ -438,7 +438,7 @@ const theme = {
       borderWidth: '3px',
       borderStyle: 'solid',
       borderImageSlice: '1',
-      borderImageSource: (themes) =>
+      borderImageSource: themes =>
         `linear-gradient(to left, ${themes.colors.info}, ${themes.colors.warning})`,
       color: 'white',
       outline: 'none',
@@ -449,7 +449,7 @@ const theme = {
       borderWidth: '3px',
       borderStyle: 'solid',
       borderImageSlice: '1',
-      borderImageSource: (themes) =>
+      borderImageSource: themes =>
         `linear-gradient(to left, ${themes.colors.info}, ${themes.colors.warning})`,
       color: 'white',
       outline: 'none',

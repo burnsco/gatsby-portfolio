@@ -4,21 +4,26 @@ import SocialLink from './SocialLink'
 import { socials } from '../../data/socials'
 import RenderIcon from './RenderIcon'
 
-const SocialIcons = (props) => (
+const SocialIcons = props => (
   <div
     sx={{
       display: 'flex',
       mt: 2,
     }}
   >
-    {socials.map((item) => (
+    {socials.map(item => (
       <SocialLink
         key={`SocialLink-${item.title}`}
         name={item.title}
         url={item.url}
         {...props}
       >
-        <RenderIcon iconName={item.iconName} width="2em" height="2em" />
+        <RenderIcon
+          iconName={item.iconName}
+          width="2em"
+          height="2em"
+          color="white"
+        />
       </SocialLink>
     ))}
   </div>
