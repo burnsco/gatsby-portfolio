@@ -12,7 +12,7 @@ const Hero = ({ title }) => (
     <Header />
     <Flex
       sx={{
-        background: (theme) => [
+        background: theme => [
           `${theme.colors.eerieblack}`,
           `linear-gradient(${theme.colors.primary}, ${theme.colors.secondary})`,
         ],

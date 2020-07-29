@@ -1,5 +1,7 @@
 import React from 'react'
 import { Box } from 'theme-ui'
+import reddit from '../../assets/redditclonedemo.webm'
+import quickeats from '../../assets/quikeatsdemo.webm'
 
 // eslint-disable-next-line react/prop-types
 const ProjectVideo = ({ video }) => (
@@ -14,7 +16,11 @@ const ProjectVideo = ({ video }) => (
       loop
       muted
     >
-      <source src={video} type="video/webm" />
+      {video === 'reddit' ? (
+        <source src={reddit} type="video/webm" />
+      ) : (
+        <source src={quickeats} type="video/webm" />
+      )}
     </video>
   </Box>
 )

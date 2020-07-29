@@ -31,12 +31,12 @@ const ProjectInfo = ({ description, webUrl, gitUrl, title, builtWith }) => (
     </Flex>
     <Flex sx={{ my: [1, 2] }}>
       <small>Tech: </small>
-      {builtWith.map((item) => (
+      {builtWith.map(item => (
         <RenderIcon iconName={item.iconName} />
       ))}
     </Flex>
-    {description.map((p) => (
-      <Text key={p.id} my="2">
+    {description.map(p => (
+      <Text key={`paragraph-${p.text}`} my="2">
         {p.text}
       </Text>
     ))}
@@ -81,12 +81,12 @@ const ProjectInfo = ({ description, webUrl, gitUrl, title, builtWith }) => (
             fontSize: [0, 1],
             backgroundColor: 'orangesoda',
             color: 'white',
-            border: (theme) => `3px solid ${theme.colors.orangesoda}`,
+            border: theme => `3px solid ${theme.colors.orangesoda}`,
             m: 2,
 
             ':hover': {
               bg: 'primaryDark',
-              border: (theme) => `3px solid ${theme.colors.primaryDark}`,
+              border: theme => `3px solid ${theme.colors.primaryDark}`,
             },
           }}
           title="Demo"
