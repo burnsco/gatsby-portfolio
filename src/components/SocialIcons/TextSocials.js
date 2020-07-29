@@ -1,20 +1,6 @@
 /** @jsx jsx */
 import { jsx, Flex, Link } from 'theme-ui'
-
-const socials = [
-  { id: 'social-email', url: 'mailto:coreyburns@outlook.com', title: 'Email' },
-  {
-    id: 'social-github',
-    url: 'https://www.github.com/burnsco',
-    title: 'Github',
-  },
-  {
-    id: 'social-telegram',
-    url: 'https://t.me/coreyburns',
-    title: 'Telegram',
-  },
-  { id: 'social-icq', url: 'https://icq.im/767901533', title: 'ICQ' },
-]
+import { socials } from '../../data/socials'
 
 const TextSocials = () => (
   <Flex
@@ -35,7 +21,7 @@ const TextSocials = () => (
             color: 'red',
           },
         }}
-        id={item.id}
+        id={`TextSocialLink-${item.title}`}
         href={item.url}
         target="_blank"
         rel="noreferrer noopen"

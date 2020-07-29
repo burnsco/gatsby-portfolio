@@ -1,41 +1,52 @@
+import { graphql, useStaticQuery } from 'gatsby'
 /** @jsx jsx */
 import { jsx, Heading, Text, Flex } from 'theme-ui'
-import PropTypes from 'prop-types'
+import CustomContainer from '../../components/Containers/CustomContainer'
 import RenderIcons from '../../components/SocialIcons/RenderIcons'
 
-const DeveloperInfo = ({ delay, iconname, title, excerpt }) => (
-  <Flex sx={{ flexDirection: 'column', flexWrap: 'wrap' }}>
-    <Heading
-      data-sal="slide-left"
-      data-sal-delay={delay}
-      data-sal-easing="ease"
-      sx={{
-        fontSize: [2, 3],
-        mb: 2,
-      }}
-    >
-      <RenderIcons iconname={iconname} />
-      <span sx={{ ml: 2 }}>{title}</span>
-    </Heading>
+export default function DeveloperInfo() {
+  const { data } = useStaticQuery(graphql`
+    {
+      data: allDeveloperInfoJson {
+        nodes {
+          delay
+          iconName
+          title
+          excerpt {
+            text
+          }
+        }
+      }
+    }
+  `)
 
-    {excerpt.map((paragraph) => (
-      <Text
-        key={paragraph.id}
-        sx={{
-          fontSize: [0, 1],
-        }}
-      >
-        {paragraph.text}
-      </Text>
-    ))}
-  </Flex>
-)
+  return (
+    <CustomContainer>
+      <Flex sx={{ flexDirection: 'column', flexWrap: 'wrap' }}>
+        <Heading
+          data-sal="slide-left"
+          data-sal-delay={data.nodes[0].delay}
+          data-sal-easing="ease"
+          sx={{
+            fontSize: [2, 3],
+            mb: 2,
+          }}
+        >
+          <RenderIcons iconname={data.nodes[0].iconName} />
+          <span sx={{ ml: 2 }}>{data.nodes[0].title}</span>
+        </Heading>
 
-DeveloperInfo.propTypes = {
-  delay: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  excerpt: PropTypes.arrayOf(PropTypes.object).isRequired,
-  iconname: PropTypes.string.isRequired,
+        {data.nodes[0].excerpt.map((paragraph, i) => (
+          <Text
+            key={`DeveloperInfo-Paragraph-${i}`}
+            sx={{
+              fontSize: [0, 1],
+            }}
+          >
+            {paragraph.text}
+          </Text>
+        ))}
+      </Flex>
+    </CustomContainer>
+  )
 }
-
-export default DeveloperInfo

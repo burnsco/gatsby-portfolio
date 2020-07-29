@@ -15,7 +15,7 @@ const Skills = ({ title }) => (
 
       <Grid
         sx={{
-          gap: 4,
+          gap: 2,
           mb: [4, 5, 6],
           gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
         }}

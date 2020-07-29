@@ -1,6 +1,5 @@
 export const miniapps = [
   {
-    id: 'dice-roll-miniapp',
     title: 'Dice Roll',
     section: 'MiniApps',
     webUrl: 'https://mini-app-container-3qd37lb3a.vercel.app/dice/',
@@ -9,7 +8,6 @@ export const miniapps = [
     image: `dice`,
   },
   {
-    id: 'lottery-generator-miniapp',
     title: 'Lottery Numbers',
     section: 'MiniApps',
     webUrl: 'https://mini-app-container-3qd37lb3a.vercel.app/lottery/',
@@ -19,7 +17,6 @@ export const miniapps = [
     image: `lottery`,
   },
   {
-    id: 'luggage-tracker-miniapp',
     title: 'Luggage Tracker',
     section: 'MiniApps',
     webUrl: 'https://mini-app-container-3qd37lb3a.vercel.app/luggage/',
@@ -28,7 +25,6 @@ export const miniapps = [
     image: `luggage`,
   },
   {
-    id: 'pizza-calculator-miniapp',
     title: 'Pizza Calculator',
     section: 'MiniApps',
     webUrl: 'https://mini-app-container-3qd37lb3a.vercel.app/pizza/',
@@ -37,7 +33,6 @@ export const miniapps = [
     image: `pizza`,
   },
   {
-    id: 'monsters-rolodex-miniapp',
     title: 'Monsters',
     section: 'MiniApps',
     webUrl: 'https://mini-app-container-3qd37lb3a.vercel.app/rolodex/',
@@ -47,7 +42,6 @@ export const miniapps = [
     image: `monsters`,
   },
   {
-    id: 'coin-flip-miniapp',
     title: 'Coin Flip',
     section: 'MiniApps',
     webUrl: 'https://mini-app-container-3qd37lb3a.vercel.app/coin/',

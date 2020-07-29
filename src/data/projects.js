@@ -3,9 +3,7 @@ import quikeatsdemo from '../assets/quikeatsdemo.webm'
 
 export const projects = [
   {
-    id: 'reddit-clone-project',
     title: 'Reddit Clone',
-    section: 'Projects',
     webUrl: 'https://reddit-frontend.now.sh',
     gitUrl: 'https://github.com/burnsco/reddit-clone',
     description: [
@@ -43,7 +41,6 @@ export const projects = [
   },
   {
     title: 'UberEats Clone',
-    section: 'Projects',
     webUrl: 'https://quickeats-react.now.sh',
     gitUrl: 'https://github.com/burnsco/quickeats-react',
     description: [
