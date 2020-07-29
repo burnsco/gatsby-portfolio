@@ -22,8 +22,7 @@ const HeaderNew = () => (
             <NavLink
               sx={{
                 fontSize: ['10px', 0, 1, 2],
-                color: isSelected ? `accent3` : `#A9A9B3`,
-                textTransform: 'uppercase',
+                color: isSelected ? `accent3` : `white`,
                 fontWeight: 500,
                 ':hover': {
                   cursor: 'pointer',

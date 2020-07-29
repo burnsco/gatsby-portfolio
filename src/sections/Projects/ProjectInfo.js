@@ -1,11 +1,9 @@
 /** @jsx jsx */
-import { jsx, Text, Flex, Link, Heading, Badge } from 'theme-ui'
+import { jsx, Text, Flex, Link, Heading } from 'theme-ui'
 import PropTypes from 'prop-types'
 
-import { InlineIcon } from '@iconify/react'
-import gitAlt from '@iconify/icons-fa-brands/git-alt'
-import webIcon from '@iconify/icons-ls/web'
 import CoolButton from '../../components/Buttons/CoolButton'
+import RenderIcon from '../../components/SocialIcons/RenderIcon'
 
 const ProjectInfo = ({ description, webUrl, gitUrl, title, builtWith }) => (
   <Flex
@@ -15,30 +13,28 @@ const ProjectInfo = ({ description, webUrl, gitUrl, title, builtWith }) => (
     }}
   >
     {' '}
-    <Heading
-      sx={{
-        color: 'black',
-        fontWeight: '800',
-        my: 2,
-      }}
-    >
-      <span
+    <Flex sx={{ my: 2 }}>
+      <Heading
         sx={{
-          color: 'blackolive',
+          color: 'black',
+          fontWeight: '800',
         }}
       >
-        {title}
-      </span>
-    </Heading>
-    <Text sx={{ mb: [1, 2] }}>
+        <span
+          sx={{
+            color: 'blackolive',
+          }}
+        >
+          {title}
+        </span>
+      </Heading>
+    </Flex>
+    <Flex sx={{ my: [1, 2] }}>
+      <small>Tech: </small>
       {builtWith.map((item) => (
-        <Badge key={item.id} variant="outline" sx={{ m: [0, 1] }}>
-          <small sx={{ fontSize: ['8px', '10px'], color: 'black' }}>
-            {item.iconname}
-          </small>
-        </Badge>
+        <RenderIcon iconName={item.iconName} />
       ))}
-    </Text>
+    </Flex>
     {description.map((p) => (
       <Text key={p.id} my="2">
         {p.text}
@@ -71,7 +67,7 @@ const ProjectInfo = ({ description, webUrl, gitUrl, title, builtWith }) => (
           }}
           title="Source"
         >
-          <InlineIcon width="1.5em" height="1.5em" icon={gitAlt} />
+          <RenderIcon iconName="gitAlt" />
         </CoolButton>
       </Link>
       <Link
@@ -95,7 +91,7 @@ const ProjectInfo = ({ description, webUrl, gitUrl, title, builtWith }) => (
           }}
           title="Demo"
         >
-          <InlineIcon width="1.3em" height="1.3em" icon={webIcon} />
+          <RenderIcon iconName="webIcon" />
         </CoolButton>
       </Link>
     </Flex>

@@ -30,9 +30,9 @@ const TextSocials = () => (
         key={item.id}
         sx={{
           textDecoration: 'none',
-          color: 'indigo.4',
+          color: 'orange',
           '&:hover': {
-            color: 'indigo.2',
+            color: 'red',
           },
         }}
         id={item.id}

@@ -18,7 +18,9 @@ const MySkills = ({ delay, iconname, title, skills }) => (
 
       {skills.map((skill) => (
         <Badge key={skill.id} variant="outline" sx={{ m: [0, 1] }}>
-          <small sx={{ fontSize: ['8px', '10px'] }}>{skill.title}</small>
+          <small sx={{ fontSize: ['8px', '10px'], color: 'black' }}>
+            {skill.title}
+          </small>
         </Badge>
       ))}
     </li>
