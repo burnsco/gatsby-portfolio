@@ -1,4 +1,5 @@
 require('@ffmpeg-installer/ffmpeg')
+require('@ffprobe-installer/ffprobe')
 
 module.exports = {
   siteMetadata: {
@@ -14,6 +15,7 @@ module.exports = {
     ],
   },
   plugins: [
+    'gatsby-plugin-netlify-cache',
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-scroll-reveal`,
