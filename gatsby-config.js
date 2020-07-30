@@ -1,6 +1,3 @@
-require('@ffmpeg-installer/ffmpeg')
-require('@ffprobe-installer/ffprobe')
-
 module.exports = {
   siteMetadata: {
     siteUrl: `https://coreyburns.dev`,
@@ -15,7 +12,6 @@ module.exports = {
     ],
   },
   plugins: [
-    'gatsby-plugin-netlify-cache',
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-scroll-reveal`,
@@ -43,10 +39,6 @@ module.exports = {
         defaultQuality: 75,
       },
     },
-    `gatsby-plugin-ffmpeg`,
-    `gatsby-transformer-ffmpeg`,
-    `gatsby-video`,
-
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
