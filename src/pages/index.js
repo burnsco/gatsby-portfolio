@@ -8,17 +8,19 @@ import MiniApps from '../sections/MiniApps'
 import About from '../sections/About'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
+import SEO from '../components/seo/seo'
 
-const IndexPage = () => (
-  <Layout>
-    <Hero title="Home" />
-    <Skills title="Skills" />
-    <Projects title="Projects" />
-    <MiniApps title="Apps" />
-    <About title="About" />
-    <Contact title="Contact" />
-    <Footer />
-  </Layout>
-)
-
-export default IndexPage
+export default function IndexPage() {
+  return (
+    <Layout>
+      <SEO />
+      <Hero title="Home" />
+      <Skills title="Skills" />
+      <Projects title="Projects" />
+      <MiniApps title="Apps" />
+      <About title="About" />
+      <Contact title="Contact" />
+      <Footer />
+    </Layout>
+  )
+}

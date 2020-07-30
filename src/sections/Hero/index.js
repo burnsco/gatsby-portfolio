@@ -18,7 +18,7 @@ const Hero = ({ title }) => {
           image {
             childImageSharp {
               fixed(width: 130, height: 130) {
-                ...GatsbyImageSharpFixed
+                ...GatsbyImageSharpFixed_withWebp
               }
             }
           }

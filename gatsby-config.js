@@ -4,7 +4,6 @@ module.exports = {
     title: `My Portfolio Site`,
     description: `Contains my projects, skills, a little about me, and contact information`,
     author: `Corey Burns`,
-    position: `Full-stack Developer`,
     contact: [
       { name: `Email`, link: `coreyburns@outlook.com` },
       { name: `GitHub`, link: `https://github.com/burnsco` },
@@ -49,7 +48,7 @@ module.exports = {
         background_color: `#292a2d`,
         theme_color: `#F39237`,
         display: `minimal-ui`,
-        icon: `src/images/buddha.png`,
+        icon: `src/assets/buddha.png`,
       },
     },
   ],

@@ -16,7 +16,7 @@ const HeaderNew = () => (
         p: [1, 2, 3],
       }}
     >
-      {sections.map((section) => (
+      {sections.map(section => (
         <SectionLink section={section} key={`${section}`}>
           {({ onClick, isSelected }) => (
             <NavLink
