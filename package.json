@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Corey Burns <coreymburns@gmail.com>",
   "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
+    "@ffprobe-installer/ffprobe": "^1.0.12",
     "@iconify/core": "^1.0.0-beta.2",
     "@iconify/icons-brandico": "^1.0.7",
     "@iconify/icons-cib": "^1.0.3",

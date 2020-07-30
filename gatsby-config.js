@@ -1,3 +1,5 @@
+require('@ffmpeg-installer/ffmpeg')
+
 module.exports = {
   siteMetadata: {
     siteUrl: `https://coreyburns.dev`,
