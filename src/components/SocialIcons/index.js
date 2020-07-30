@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import SocialLink from './SocialLink'
-import { socials } from '../../data/socials'
+import socials from '../../data/socials.json'
 import RenderIcon from './RenderIcon'
 
 const SocialIcons = props => (

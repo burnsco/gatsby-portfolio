@@ -30,9 +30,11 @@ const ProjectInfo = ({ description, webUrl, gitUrl, title, builtWith }) => (
       </Heading>
     </Flex>
     <Flex sx={{ my: [1, 2] }}>
-      <small>Tech: </small>
+      <span>Tech:</span>
       {builtWith.map(item => (
-        <RenderIcon iconName={item.iconName} />
+        <span sx={{ ml: 2, fontSize: [2, 3] }}>
+          <RenderIcon iconName={item.iconName} />
+        </span>
       ))}
     </Flex>
     {description.map(p => (

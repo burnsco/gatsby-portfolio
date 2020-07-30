@@ -3,7 +3,6 @@ import { jsx, Box, Grid } from 'theme-ui'
 import PropTypes from 'prop-types'
 import SectionContainer from '../Container/SectionContainer'
 
-import { aboutMeData, aboutMeRandomFacts } from '../../data/about'
 import AboutMe from './AboutMe'
 import RandomFacts from './RandomFacts'
 import CustomContainer from '../../components/Containers/CustomContainer'
@@ -22,9 +21,7 @@ const About = ({ title }) => (
           }}
         >
           <Box>
-            {aboutMeData.map((data) => (
-              <AboutMe key={data.id} {...data} />
-            ))}
+            <AboutMe />
           </Box>
 
           <Box>
@@ -33,9 +30,7 @@ const About = ({ title }) => (
                 height: '100%',
               }}
             >
-              {aboutMeRandomFacts.map((data) => (
-                <RandomFacts key={data.id} {...data} />
-              ))}
+              <RandomFacts />
             </Grid>
           </Box>
         </Grid>

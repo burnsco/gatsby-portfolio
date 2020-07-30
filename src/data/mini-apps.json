@@ -5,7 +5,7 @@
     "webUrl":"https://mini-app-container-3qd37lb3a.vercel.app/dice/",
     "gitUrl":"https://github.com/burnsco/reddit-clone",
     "excerpt":"Roll a couple dice, good starter for a board game.",
-    "image":"./images/dice2.jpg"
+    "image":"./images/dice2.jpeg"
   },
   {
     "title":"Lottery Numbers",
@@ -37,7 +37,7 @@
     "webUrl":"https://mini-app-container-3qd37lb3a.vercel.app/rolodex/",
     "gitUrl":"https://github.com/burnsco/reddit-clone",
     "excerpt":"Fetch some sample users and filter them in real time! (with silly monster cards)",
-    "image":"./monsters.jpg"
+    "image":"./images/monsters.jpg"
   },
   {
     "title":"Coin Flip",

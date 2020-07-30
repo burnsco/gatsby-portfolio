@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Flex, Link } from 'theme-ui'
-import { socials } from '../../data/socials'
+import socials from '../../data/socials.json'
 
 const TextSocials = () => (
   <Flex
@@ -11,7 +11,7 @@ const TextSocials = () => (
       mt: 2,
     }}
   >
-    {socials.map((item) => (
+    {socials.map(item => (
       <Link
         key={item.id}
         sx={{

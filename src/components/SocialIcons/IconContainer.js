@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
-const IconContainer = (props) => (
+const IconContainer = props => (
   <div
     {...props}
     sx={{
