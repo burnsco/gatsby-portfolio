@@ -28,14 +28,14 @@ export default function RandomFacts() {
           mb: 2,
         }}
       >
-        <RenderIcon iconName={data.nodes[0].iconName} />
+        <RenderIcon iconname={data.nodes[0].iconName} />
         <span sx={{ ml: 2 }}>{data.nodes[0].title}</span>
       </Heading>
       <ul sx={{ m: 0, p: 0, fontSize: [0, 1, 2] }}>
-        {data.nodes[0].facts.map(fact => (
+        {data.nodes[0].facts.map((fact, i) => (
           <li
             data-sal="slide-up"
-            key={fact.id}
+            key={`random-fact-${fact}-${i}`}
             data-sal-delay={data.nodes[0].delay}
             data-sal-easing="ease"
           >

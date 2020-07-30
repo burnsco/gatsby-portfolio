@@ -39,6 +39,10 @@ module.exports = {
         defaultQuality: 75,
       },
     },
+    `gatsby-plugin-ffmpeg`,
+    `gatsby-transformer-ffmpeg`,
+    `gatsby-video`,
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

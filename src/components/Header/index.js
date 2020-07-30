@@ -21,7 +21,7 @@ const HeaderNew = () => (
           {({ onClick, isSelected }) => (
             <NavLink
               sx={{
-                fontSize: ['10px', 0, 1, 2],
+                fontSize: [0, 1, 2],
                 color: isSelected ? `accent3` : `white`,
                 fontWeight: 500,
                 ':hover': {

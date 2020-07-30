@@ -32,7 +32,7 @@ export default function DeveloperInfo() {
             mb: 2,
           }}
         >
-          <RenderIcon iconName={data.nodes[0].iconName} />
+          <RenderIcon iconname={data.nodes[0].iconName} />
           <span sx={{ ml: 2 }}>{data.nodes[0].title}</span>
         </Heading>
 

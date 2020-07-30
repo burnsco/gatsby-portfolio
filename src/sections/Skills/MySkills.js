@@ -27,10 +27,9 @@ export default function MySkills() {
       }}
     >
       {data.nodes.map((item, i) => (
-        <CustomContainer>
+        <CustomContainer key={`my-skills-${item.title}-${i}`}>
           <ul sx={{ m: 0, p: 0, listStyleType: 'none' }}>
             <li
-              key={`my-skills-${item.title}-${i}`}
               data-sal="slide-up"
               data-sal-delay={item.delay}
               data-sal-easing="ease"
@@ -41,17 +40,17 @@ export default function MySkills() {
                   mb: 1,
                 }}
               >
-                <RenderIcon iconName={item.iconName} />
+                <RenderIcon iconname={item.iconName} />
                 <span sx={{ ml: 2 }}>{item.title}</span>
               </Heading>
 
-              {item.skills.map((skill) => (
+              {item.skills.map((skill, d) => (
                 <Badge
-                  key={`MySkills-${i}`}
+                  key={`MySkills-${skill.title}-${d}`}
                   variant="outline"
-                  sx={{ m: [0, 1] }}
+                  sx={{ m: [0, 1], ml: [1, null, null, null] }}
                 >
-                  <small sx={{ fontSize: ['8px', '10px'], color: 'black' }}>
+                  <small sx={{ fontSize: ['8px', '10px'], color: 'text' }}>
                     {skill.title}
                   </small>
                 </Badge>

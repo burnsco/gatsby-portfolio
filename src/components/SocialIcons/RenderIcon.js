@@ -75,10 +75,10 @@ addIcon('heroku', herokuIcon)
 addIcon('google', googleCloud)
 
 export default function RenderIcon(props) {
-  const { iconName } = props
-  return <InlineIcon icon={iconName} {...props} />
+  const { iconname } = props
+  return <InlineIcon icon={iconname} {...props} />
 }
 
 RenderIcon.propTypes = {
-  iconName: PropTypes.string.isRequired,
+  iconname: PropTypes.string.isRequired,
 }

@@ -68,8 +68,8 @@ const Contact = ({ title }) => (
               lineHeight: `inherit`,
               alignSelf: 'flex-end',
               mt: 2,
-              bg: 'saffron',
-              ':hover': { bg: 'accent4' },
+              bg: 'blueDark',
+              ':hover': { bg: 'carolinablue' },
             }}
             title="Send"
             type="submit"

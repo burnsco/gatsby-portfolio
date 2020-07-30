@@ -28,7 +28,7 @@
       {"title":"Linux","iconName":"linux"},
       {"title":"Google Cloud","iconName":"google"}
     ],
-    "video":"reddit"
+    "video":"./videos/reddit.mp4"
   },
   {
     "title":"UberEats Clone",
@@ -46,6 +46,6 @@
       {"title":"SASS","iconName":"sass"},
       {"title":"Firebase","iconName":"firebase"}
     ],
-    "video":"quickeats"
+    "video":"./videos/quickeats.mp4"
   }
 ]

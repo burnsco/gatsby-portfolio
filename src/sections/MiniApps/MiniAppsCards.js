@@ -45,11 +45,11 @@ export default function MiniAppsCards() {
         gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
       }}
     >
-      {data.nodes.map(app => (
+      {data.nodes.map((app, i) => (
         <Card
           sx={{ display: 'flex', flexDirection: 'column' }}
           variant="compact"
-          key={app.id}
+          key={`mini-apps-${app.title}-${i}`}
         >
           <Heading sx={{ textAlign: 'center', fontSize: [1, 2, 3], p: 1 }}>
             {app.title}

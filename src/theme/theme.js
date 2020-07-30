@@ -465,7 +465,7 @@ const theme = {
       p: 2,
       '&:hover': {
         transition: '0.2s ease-in',
-        color: '#f6f6f6',
+        color: 'saffron',
       },
     },
   },

@@ -8,12 +8,10 @@ import MiniApps from '../sections/MiniApps'
 import About from '../sections/About'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
-import SEO from '../components/seo/seo'
 
 export default function IndexPage() {
   return (
     <Layout>
-      <SEO />
       <Hero title="Home" />
       <Skills title="Skills" />
       <Projects title="Projects" />

@@ -31,13 +31,13 @@ export default function AboutMe() {
             mb: 2,
           }}
         >
-          <RenderIcon iconName={data.nodes[0].iconName} />
+          <RenderIcon iconname={data.nodes[0].iconName} />
           <span sx={{ ml: 2 }}>{data.nodes[0].title}</span>
         </Heading>
 
-        {data.nodes[0].excerpt.map(paragraph => (
+        {data.nodes[0].excerpt.map((paragraph, i) => (
           <Text
-            key={paragraph.id}
+            key={`p-${paragraph}-${i}`}
             sx={{
               fontSize: [0, 1],
             }}

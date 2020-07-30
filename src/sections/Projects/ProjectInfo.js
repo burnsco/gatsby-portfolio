@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, Text, Flex, Link, Heading } from 'theme-ui'
-import PropTypes from 'prop-types'
 
 import CoolButton from '../../components/Buttons/CoolButton'
 import RenderIcon from '../../components/SocialIcons/RenderIcon'
@@ -29,11 +28,13 @@ const ProjectInfo = ({ description, webUrl, gitUrl, title, builtWith }) => (
         </span>
       </Heading>
     </Flex>
-    <Flex sx={{ my: [1, 2] }}>
-      <span>Tech:</span>
-      {builtWith.map(item => (
-        <span sx={{ ml: 2, fontSize: [2, 3] }}>
-          <RenderIcon iconName={item.iconName} />
+    <Flex sx={{ my: [1, 2], flexWrap: 'wrap' }}>
+      {builtWith.map((item, i) => (
+        <span
+          key={`BuiltWith-${item.title}-${i}`}
+          sx={{ ml: 2, fontSize: [0, 1, 2, 3] }}
+        >
+          <RenderIcon iconname={item.iconName} />
         </span>
       ))}
     </Flex>
@@ -69,7 +70,7 @@ const ProjectInfo = ({ description, webUrl, gitUrl, title, builtWith }) => (
           }}
           title="Source"
         >
-          <RenderIcon iconName="gitAlt" />
+          <RenderIcon iconname="gitAlt" />
         </CoolButton>
       </Link>
       <Link
@@ -93,19 +94,11 @@ const ProjectInfo = ({ description, webUrl, gitUrl, title, builtWith }) => (
           }}
           title="Demo"
         >
-          <RenderIcon iconName="webIcon" />
+          <RenderIcon iconname="webIcon" />
         </CoolButton>
       </Link>
     </Flex>
   </Flex>
 )
-
-ProjectInfo.propTypes = {
-  builtWith: PropTypes.arrayOf(PropTypes.object).isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.arrayOf(PropTypes.object).isRequired,
-  webUrl: PropTypes.string.isRequired,
-  gitUrl: PropTypes.string.isRequired,
-}
 
 export default ProjectInfo
