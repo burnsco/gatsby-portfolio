@@ -45,6 +45,7 @@ const Hero = ({ title }) => {
           objectFit="cover"
           objectPosition="50% 50%"
           sx={{
+            mb: 3,
             WebkitBoxShadow:
               '0 0 1px 11px rgba(80, 81, 79, .15), 0 0 1px 22px rgba(80, 81, 79, .1)',
             boxShadow:
