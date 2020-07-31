@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Box, jsx } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import { graphql, useStaticQuery } from 'gatsby'
 import SocialLink from './SocialLink'
 import RenderIcon from './RenderIcon'
@@ -20,7 +20,10 @@ const SocialIcons = () => {
     <div
       sx={{
         display: 'flex',
-        mt: 2,
+        mt: 4,
+        ml: 4,
+        width: '12em',
+        justifyContent: 'space-evenly',
       }}
     >
       {data.nodes.map(item => (
@@ -29,14 +32,12 @@ const SocialIcons = () => {
           name={item.title}
           url={item.url}
         >
-          <Box>
-            <RenderIcon
-              iconname={item.iconName}
-              width="2em"
-              height="2em"
-              color="white"
-            />
-          </Box>
+          <RenderIcon
+            iconname={item.iconName}
+            width="1.5em"
+            height="1.5em"
+            color="white"
+          />
         </SocialLink>
       ))}
     </div>
