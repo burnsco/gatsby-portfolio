@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { Box, jsx } from 'theme-ui'
 import { graphql, useStaticQuery } from 'gatsby'
 import SocialLink from './SocialLink'
 import RenderIcon from './RenderIcon'
@@ -29,12 +29,14 @@ const SocialIcons = () => {
           name={item.title}
           url={item.url}
         >
-          <RenderIcon
-            iconname={item.iconName}
-            width="2em"
-            height="2em"
-            color="white"
-          />
+          <Box>
+            <RenderIcon
+              iconname={item.iconName}
+              width="2em"
+              height="2em"
+              color="white"
+            />
+          </Box>
         </SocialLink>
       ))}
     </div>
