@@ -4,8 +4,6 @@ import Tippy from '@tippyjs/react'
 import PropTypes from 'prop-types'
 import 'tippy.js/dist/tippy.css' // eslint-disable-line
 
-// TODO fix social media icons to look nicer
-
 const SocialLink = ({ name, url, top, children }) => (
   <Tippy
     content={name}

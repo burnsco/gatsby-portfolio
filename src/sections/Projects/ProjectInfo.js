@@ -70,7 +70,7 @@ const ProjectInfo = ({ description, webUrl, gitUrl, title, builtWith }) => (
           }}
           title="Source"
         >
-          <RenderIcon iconname="gitAlt" />
+          <RenderIcon width="1.4em" height="1.5em" iconname="gitAlt" />
         </CoolButton>
       </Link>
       <Link
@@ -82,19 +82,19 @@ const ProjectInfo = ({ description, webUrl, gitUrl, title, builtWith }) => (
         <CoolButton
           sx={{
             fontSize: [0, 1],
-            backgroundColor: 'orangesoda',
-            color: 'white',
-            border: theme => `3px solid ${theme.colors.orangesoda}`,
+            backgroundColor: 'white',
+            color: 'text',
+            alignSelf: 'flex-start',
+            border: '2px solid #e7e7e7',
             m: 2,
 
             ':hover': {
-              bg: 'primaryDark',
-              border: theme => `3px solid ${theme.colors.primaryDark}`,
+              backgroundColor: '#e7e7e7',
             },
           }}
           title="Demo"
         >
-          <RenderIcon iconname="webIcon" />
+          <RenderIcon width="1.4em" height="1.5em" iconname="webIcon" />
         </CoolButton>
       </Link>
     </Flex>

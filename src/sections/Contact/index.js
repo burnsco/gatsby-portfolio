@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Flex, Input, Textarea, Label, Box, Heading } from 'theme-ui'
-import { InlineIcon } from '@iconify/react'
+import { Icon } from '@iconify/react'
 import mailOpen from '@iconify/icons-heroicons-outline/mail-open'
 import PropTypes from 'prop-types'
 import SectionContainer from '../Container/SectionContainer'
@@ -63,6 +63,7 @@ const Contact = ({ title }) => (
 
           <CoolButton
             sx={{
+              border: '2px dashed',
               cursor: `pointer`,
               fontSize: `100%`,
               lineHeight: `inherit`,
@@ -74,7 +75,7 @@ const Contact = ({ title }) => (
             title="Send"
             type="submit"
           >
-            <InlineIcon icon={mailOpen} height="1.2em" width="1.2em" />
+            <Icon icon={mailOpen} height="1.2em" width="1.2em" />
           </CoolButton>
         </Flex>
       </Flex>
