@@ -76,9 +76,9 @@ addIcon("google", googleCloud)
 
 interface RenderIconProps {
   iconname: string
-  width: string
-  height: string
-  color: string
+  width?: string
+  height?: string
+  color?: string
 }
 
 const RenderIcon: React.FC<RenderIconProps> = props => {
