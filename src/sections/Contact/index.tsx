@@ -8,12 +8,13 @@ import {
   Textarea
 } from "@chakra-ui/core"
 import * as React from "react"
+import Container from "../../components/Layout/Container"
 import SectionContainer from "../Container/SectionContainer"
 
 const Contact: React.FC<{ title: string }> = ({ title }) => {
   return (
-    <SectionContainer id={title} aria-label={title}>
-      <Box>
+    <SectionContainer id={title} aria-label={title} bg="#3b3d42">
+      <Container>
         <Flex
           width="100%"
           flexDirection="column"
@@ -60,6 +61,7 @@ const Contact: React.FC<{ title: string }> = ({ title }) => {
               border="2px dashed"
               alignSelf="flex-end"
               mt={2}
+              p={2}
               title="Send"
               type="submit"
             >
@@ -67,7 +69,7 @@ const Contact: React.FC<{ title: string }> = ({ title }) => {
             </Button>
           </Box>
         </Flex>
-      </Box>
+      </Container>
     </SectionContainer>
   )
 }

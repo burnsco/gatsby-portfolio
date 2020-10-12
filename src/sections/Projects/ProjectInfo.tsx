@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Link } from "@chakra-ui/core"
+import { Box, Button, Flex, Heading, Link, Text } from "@chakra-ui/core"
 import * as React from "react"
 import RenderIcon from "../../components/SocialIcons/RenderIcon"
 
@@ -18,9 +18,9 @@ const ProjectInfo: React.FC<{
     <Flex flexDirection="column">
       <Flex my={2}>
         <Heading color="black" fontWeight="800">
-          <Box as="span" color="black">
+          <Text fontSize="xs" color="black">
             {title}
-          </Box>
+          </Text>
         </Heading>
       </Flex>
       <Flex my={[1, 2]} flexWrap="wrap">

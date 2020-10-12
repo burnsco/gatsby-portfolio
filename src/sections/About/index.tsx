@@ -1,14 +1,15 @@
 import { Box, Grid } from "@chakra-ui/core"
 import PropTypes from "prop-types"
 import * as React from "react"
+import Container from "../../components/Layout/Container"
 import SectionContainer from "../Container/SectionContainer"
 import SectionHeading from "../Container/SectionHeading"
 import AboutMe from "./AboutMe"
-import RandomFacts from "./RandomFacts"
+import MyInterests from "./MyInterests"
 
 const About: React.FC<{ title: string }> = ({ title }) => (
-  <SectionContainer id={title} aria-label={title}>
-    <Box>
+  <SectionContainer id={title} aria-label={title} bg="#FFFFF">
+    <Container>
       <SectionHeading title="About" />
       <Grid
         gap={[3, 4]}
@@ -21,11 +22,11 @@ const About: React.FC<{ title: string }> = ({ title }) => (
 
         <Box>
           <Grid height="100%">
-            <RandomFacts />
+            <MyInterests />
           </Grid>
         </Box>
       </Grid>
-    </Box>
+    </Container>
   </SectionContainer>
 )
 

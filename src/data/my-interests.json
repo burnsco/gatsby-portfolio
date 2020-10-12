@@ -1,0 +1,42 @@
+[
+  {
+    "delay": 500,
+    "title": "My Interests",
+    "iconName": "react",
+    "facts": [
+      {
+        "title": "running/cycling/gym"
+      },
+      {
+        "title": "tv/movies/music"
+      },
+      {
+        "title": "meditation/buddhism/yoga"
+      },
+      {
+        "title": "podcasts"
+      },
+      {
+        "title": "history"
+      },
+      {
+        "title": "psychology/philosophy"
+      },
+      {
+        "title": "cooking/good food"
+      },
+      {
+        "title": "cigars & coffee"
+      },
+      {
+        "title": "guitar"
+      },
+      {
+        "title": "learning new things"
+      },
+      {
+        "title": "reading"
+      }
+    ]
+  }
+]

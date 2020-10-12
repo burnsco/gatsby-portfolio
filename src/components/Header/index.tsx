@@ -17,11 +17,12 @@ const HeaderNew = () => {
         {sections.map(({ id, onClick, selected }) => (
           <Link
             key={`section-${id}-link`}
-            color={selected ? `accent3` : `white`}
+            color={selected ? `rgba(255,172, 93,1)` : `white`}
             fontFamily="Inter"
             fontWeight="500"
             _hover={{
-              cursor: "pointer"
+              cursor: "pointer",
+              color: "rgba(255,172, 93,1)"
             }}
             aria-label={id}
             onClick={onClick}

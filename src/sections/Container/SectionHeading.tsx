@@ -7,18 +7,19 @@ const SectionHeading: React.FC<{ title: string }> = ({ title }) => {
       data-sal="fade"
       data-sal-delay="300"
       data-sal-easing="ease-out-back"
-      color="black"
+      color="#36382E"
       overflow="hidden"
       textAlign="center"
       p={5}
       letterSpacing="tight"
-      size="lg"
+      size="xl"
       fontFamily="Roboto Slab"
       fontWeight="900"
       my={2}
     >
       <PseudoBox
-        color="blackolive"
+        display="inline"
+        color="#36382E"
         backgroundImage="linear-gradient(120deg, rgba(243,147, 55,1) 0%, rgb(250, 112, 154) 100%)"
         backgroundRepeat="no-repeat"
         backgroundSize="100% 0.2em"

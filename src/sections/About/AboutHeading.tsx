@@ -6,7 +6,7 @@ const AboutHeading = () => (
     data-sal="fade"
     data-sal-delay="300"
     data-sal-easing="ease-out-back"
-    color="blackolive"
+    color="#36382E"
     overflow="hidden"
     textAlign="center"
     fontFamily="Roboto Slab"
@@ -15,7 +15,7 @@ const AboutHeading = () => (
   >
     <PseudoBox
       _hover={{ backgroundSize: "100% 88%" }}
-      color="blackolive"
+      color="#36382E"
       backgroundImage="
           'linear-gradient(to right, rgb(250, 112, 154) 0%, rgb(254, 225, 64) 100%)'"
       backgroundRepeat="no-repeat"

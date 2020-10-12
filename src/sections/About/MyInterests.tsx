@@ -1,12 +1,13 @@
 import { Box, Heading, List, ListItem } from "@chakra-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import * as React from "react"
+import Container from "../../components/Layout/Container"
 import RenderIcon from "../../components/SocialIcons/RenderIcon"
 
-export default function RandomFacts() {
+export default function MyInterests() {
   const { data } = useStaticQuery(graphql`
     {
-      data: allRandomFactsJson {
+      data: allMyInterestsJson {
         nodes {
           delay
           iconName
@@ -20,7 +21,7 @@ export default function RandomFacts() {
   `)
 
   return (
-    <Box>
+    <Container>
       <Heading mb={2}>
         <RenderIcon iconname={data.nodes[0].iconName} />
         <Box as="span" ml={2}>
@@ -39,6 +40,6 @@ export default function RandomFacts() {
           </ListItem>
         ))}
       </List>
-    </Box>
+    </Container>
   )
 }
