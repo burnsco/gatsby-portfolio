@@ -1,6 +1,7 @@
 import { Badge, Box, Grid, Heading, List, ListItem } from "@chakra-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
+import Container from "../../components/Layout/Container"
 import RenderIcon from "../../components/SocialIcons/RenderIcon"
 
 export default function MySkills() {
@@ -33,7 +34,7 @@ export default function MySkills() {
           },
           i: number
         ) => (
-          <Box key={`my-skills-${item.title}-${i}`}>
+          <Container key={`my-skills-${item.title}-${i}`}>
             <List m={0} p={0} listStyleType="none">
               <ListItem
                 data-sal="slide-up"
@@ -59,7 +60,7 @@ export default function MySkills() {
                 ))}
               </ListItem>
             </List>
-          </Box>
+          </Container>
         )
       )}
     </Grid>

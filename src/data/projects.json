@@ -16,8 +16,7 @@
     ],
     "builtWith": [
       { "title": "React", "iconName": "react" },
-      { "title": "Styled Components", "iconName": "styled" },
-      { "title": "Webpack", "iconName": "webpack" },
+      { "title": "Typescript", "iconName": "typescript" },
       { "title": "Babel", "iconName": "babel" },
       { "title": "Apollo", "iconName": "apollo" },
       { "title": "NodeJS", "iconName": "nodejs" },
@@ -25,8 +24,7 @@
       { "title": "Graphql", "iconName": "graphql" },
       { "title": "JWT/Auth", "iconName": "auth" },
       { "title": "Docker", "iconName": "docker" },
-      { "title": "Linux", "iconName": "linux" },
-      { "title": "Google Cloud", "iconName": "google" }
+      { "title": "Linux", "iconName": "linux" }
     ],
     "video": "reddit"
   },

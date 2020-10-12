@@ -79,24 +79,6 @@ export const InnerWave = styled.div`
   })}
 `
 
-export const SplashImageObj = {
-  position: "absolute",
-  top: "unset",
-  bottom: 0,
-  right: 0,
-  width: "100%",
-  height: "85vh",
-  objectFit: "contain",
-  objectPosition: "bottom",
-  userSelect: "none",
-  transition: "transform .5s, filter 1.5s ease-in-out",
-  filter: "grayscale(100%)",
-  "&:hover": {
-    filter: "grayscale(0)",
-    transform: "scale(1.1)"
-  }
-}
-
 export const HyperLink = styled.a`
   cursor: pointer;
   font-weight: 500;

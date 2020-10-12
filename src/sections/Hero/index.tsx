@@ -1,5 +1,6 @@
 import { Flex, Heading, Image } from "@chakra-ui/core"
 import * as React from "react"
+import AnimatedWave from "../../components/AnimatedWave"
 import Header from "../../components/Header"
 import SocialIcons from "../../components/SocialIcons"
 import * as avatar from "../../data/images/Me.jpg"
@@ -17,9 +18,10 @@ const Hero: React.FC<{ title: string }> = ({ title }) => {
         justifyContent="center"
       >
         <Image
-          height="120px"
-          width="120px"
+          height="130px"
+          width="130px"
           rounded="full"
+          transform="rotate(-35deg)"
           transition="transform .5s, filter 1.5s ease-in-out"
           boxShadow="0 0 1px 11px rgba(80, 81, 79, .15), 0 0 1px 22px rgba(80, 81, 79, .1)"
           mb={3}
@@ -28,7 +30,7 @@ const Hero: React.FC<{ title: string }> = ({ title }) => {
           src={avatar}
         />
         <Heading
-          as="h1"
+          size="xl"
           fontFamily="Inter"
           color="#F39237"
           letterSpacing="tight"
@@ -37,14 +39,16 @@ const Hero: React.FC<{ title: string }> = ({ title }) => {
           Corey Burns
         </Heading>
         <Heading
+          mb={4}
           fontFamily="Inter"
-          as="h3"
+          size="md"
           letterSpacing="tight"
           fontWeight="500"
         >
           Full-stack Developer
         </Heading>
         <SocialIcons />
+        <AnimatedWave bottom />
       </Flex>
     </SectionContainer>
   )

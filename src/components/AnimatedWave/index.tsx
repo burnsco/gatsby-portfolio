@@ -1,10 +1,13 @@
-import PropTypes from "prop-types"
 import React from "react"
 import { InnerWave, WaveWrapper } from "./styles"
 
-const AnimatedWave = ({ enableWave = false, bottom = true }) =>
-  enableWave && (
-    <WaveWrapper bottom={bottom}>
+type WaveProps = {
+  bottom: boolean
+}
+
+const AnimatedWave = (props: WaveProps) => {
+  return (
+    <WaveWrapper bottom={props.bottom}>
       <InnerWave layer="1" waveoffset="-1.5vh">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -55,10 +58,6 @@ const AnimatedWave = ({ enableWave = false, bottom = true }) =>
       </InnerWave>
     </WaveWrapper>
   )
-
-AnimatedWave.propTypes = {
-  enableWave: PropTypes.bool,
-  bottom: PropTypes.bool
 }
 
 export default AnimatedWave

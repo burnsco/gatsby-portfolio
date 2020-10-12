@@ -5,9 +5,10 @@ import { Section } from "react-scroll-section"
 
 const SectionContainer: React.FC<{
   id: string
+  bg?: string
   children: React.ReactNode
-}> = ({ id, children, ...props }) => (
-  <Box as={Section} id={id} {...props}>
+}> = ({ id, children, bg, ...props }) => (
+  <Box as={Section} bg={bg} id={id} {...props}>
     {children}
   </Box>
 )

@@ -29,6 +29,7 @@ import reduxIcon from "@iconify/icons-logos/redux"
 import sassIcon from "@iconify/icons-logos/sass"
 import tailwindcssIcon from "@iconify/icons-logos/tailwindcss-icon"
 import tuxIcon from "@iconify/icons-logos/tux"
+import typescriptIcon from "@iconify/icons-logos/typescript-icon"
 import vueIcon from "@iconify/icons-logos/vue"
 import webpackIcon from "@iconify/icons-logos/webpack"
 import webIcon from "@iconify/icons-ls/web"
@@ -50,6 +51,7 @@ addIcon("styled", styledComponents)
 addIcon("graphql", graphqlIcon)
 addIcon("linux", linuxTux)
 addIcon("linuxAlt", tuxIcon)
+addIcon("typescipt", typescriptIcon)
 addIcon("javascript", javascriptIcon)
 addIcon("redux", reduxIcon)
 addIcon("gatsby", gatsbyIcon)

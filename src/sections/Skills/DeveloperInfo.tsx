@@ -1,6 +1,7 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
+import Container from "../../components/Layout/Container"
 import RenderIcon from "../../components/SocialIcons/RenderIcon"
 
 export default function DeveloperInfo() {
@@ -20,9 +21,10 @@ export default function DeveloperInfo() {
   `)
 
   return (
-    <Box>
+    <Container>
       <Flex flexDirection="column" flexWrap="wrap">
         <Heading
+          size="md"
           data-sal="slide-left"
           data-sal-delay={data.nodes[0].delay}
           data-sal-easing="ease"
@@ -35,9 +37,11 @@ export default function DeveloperInfo() {
         </Heading>
 
         {data.nodes[0].excerpt.map((paragraph: { text: string }, i: number) => (
-          <Text key={`DeveloperInfo-Paragraph-${i}`}>{paragraph.text}</Text>
+          <Text fontSize="sm" key={`DeveloperInfo-Paragraph-${i}`}>
+            {paragraph.text}
+          </Text>
         ))}
       </Flex>
-    </Box>
+    </Container>
   )
 }

@@ -8,22 +8,21 @@ import MySkills from "./MySkills"
 
 const Skills: React.FC<{ title: string }> = ({ title }) => {
   return (
-    <SectionContainer id={title} aria-label={title}>
-      <Box>
-        <SectionHeading title="Skills" />
-        <Grid
-          gap={2}
-          mb={[4, 5, 6]}
-          gridTemplateColumns="repeat(auto-fit, minmax(320px, 1fr))"
-        >
-          <Box>
-            <DeveloperInfo />
-          </Box>
-          <Box>
-            <MySkills />
-          </Box>
-        </Grid>
-      </Box>
+    <SectionContainer id={title} aria-label={title} bg="#FFFFFF">
+      <SectionHeading title="Skills" />
+      <Grid
+        gap={2}
+        mb={[4, 5, 6]}
+        gridTemplateColumns="repeat(auto-fit, minmax(320px, 1fr))"
+      >
+        <Box>
+          <DeveloperInfo />
+        </Box>
+
+        <Box>
+          <MySkills />
+        </Box>
+      </Grid>
     </SectionContainer>
   )
 }

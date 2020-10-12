@@ -5,6 +5,7 @@
     "iconName": "react",
     "skills": [
       { "title": "React" },
+      { "title": "Typescript" },
       { "title": "Redux" },
       { "title": "Gatsby" },
       { "title": "Webpack" },
@@ -30,6 +31,7 @@
     "skills": [
       { "title": "NodeJS" },
       { "title": "Postgresql" },
+      { "title": "Typescript" },
       { "title": "Apollo" },
       { "title": "Graphql" },
       { "title": "MongoDB" },

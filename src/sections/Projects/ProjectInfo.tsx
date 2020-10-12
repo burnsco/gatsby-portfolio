@@ -50,9 +50,9 @@ const ProjectInfo: React.FC<{
             _hover={{
               backgroundColor: "#e7e7e7"
             }}
-            title="Source"
           >
             <RenderIcon width="1.4em" height="1.5em" iconname="gitAlt" />
+            Source
           </Button>
         </Link>
         <Link
@@ -70,9 +70,9 @@ const ProjectInfo: React.FC<{
             _hover={{
               backgroundColor: "#e7e7e7"
             }}
-            title="Demo"
           >
             <RenderIcon width="1.4em" height="1.5em" iconname="webIcon" />
+            Demo
           </Button>
         </Link>
       </Flex>

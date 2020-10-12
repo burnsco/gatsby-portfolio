@@ -1,7 +1,8 @@
-import { Flex, Link } from "@chakra-ui/core"
+import { Flex } from "@chakra-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import * as React from "react"
 import RenderIcon from "./RenderIcon"
+import SocialLink from "./SocialLink"
 
 const SocialIcons = () => {
   const { data } = useStaticQuery(graphql`
@@ -16,13 +17,13 @@ const SocialIcons = () => {
     }
   `)
   return (
-    <Flex mt={4} ml={4} width="12em" justifyContent="space-evenly">
+    <Flex mt={4} ml={8} width="12em" justifyContent="space-evenly">
       {data.nodes.map(
         (item: { title: string; url: string; iconName: string }) => (
-          <Link
+          <SocialLink
             key={`SocialLink-${item.title}`}
             name={item.title}
-            href={item.url}
+            url={item.url}
           >
             <RenderIcon
               iconname={item.iconName}
@@ -30,7 +31,7 @@ const SocialIcons = () => {
               height="1.5em"
               color="white"
             />
-          </Link>
+          </SocialLink>
         )
       )}
     </Flex>
