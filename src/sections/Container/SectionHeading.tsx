@@ -1,4 +1,4 @@
-import { Heading, PseudoBox } from "@chakra-ui/core"
+import { Box, Heading } from "@chakra-ui/core"
 import * as React from "react"
 
 const SectionHeading: React.FC<{ title: string }> = ({ title }) => {
@@ -10,14 +10,14 @@ const SectionHeading: React.FC<{ title: string }> = ({ title }) => {
       color="#36382E"
       overflow="hidden"
       textAlign="center"
-      p={5}
       letterSpacing="tight"
       size="xl"
       fontFamily="Roboto Slab"
       fontWeight="900"
-      my={2}
+      my="2em"
     >
-      <PseudoBox
+      <Box
+        as="span"
         display="inline"
         color="#36382E"
         backgroundImage="linear-gradient(120deg, rgba(243,147, 55,1) 0%, rgb(250, 112, 154) 100%)"
@@ -30,7 +30,7 @@ const SectionHeading: React.FC<{ title: string }> = ({ title }) => {
         }}
       >
         {title}
-      </PseudoBox>
+      </Box>
     </Heading>
   )
 }

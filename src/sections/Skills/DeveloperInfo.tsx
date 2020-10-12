@@ -25,6 +25,7 @@ export default function DeveloperInfo() {
       <Flex flexDirection="column" flexWrap="wrap">
         <Heading
           size="md"
+          fontFamily="Inter"
           data-sal="slide-left"
           data-sal-delay={data.nodes[0].delay}
           data-sal-easing="ease"

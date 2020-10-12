@@ -7,7 +7,7 @@ type WaveProps = {
 
 const AnimatedWave = (props: WaveProps) => {
   return (
-    <WaveWrapper bottom={props.bottom}>
+    <WaveWrapper bottom>
       <InnerWave layer="1" waveoffset="-1.5vh">
         <svg
           xmlns="http://www.w3.org/2000/svg"

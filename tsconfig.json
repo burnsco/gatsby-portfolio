@@ -19,5 +19,5 @@
     "target": "esnext"
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", "src/gatsby-plugin-chakra-ui/theme.js"]
+  "include": ["**/*.ts", "**/*.tsx"]
 }

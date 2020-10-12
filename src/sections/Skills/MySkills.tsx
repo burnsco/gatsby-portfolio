@@ -1,4 +1,13 @@
-import { Badge, Box, Grid, Heading, List, ListItem } from "@chakra-ui/core"
+import {
+  Badge,
+  Box,
+  Flex,
+  Grid,
+  Heading,
+  List,
+  ListItem,
+  Text
+} from "@chakra-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import Container from "../../components/Layout/Container"
@@ -35,27 +44,40 @@ export default function MySkills() {
           i: number
         ) => (
           <Container key={`my-skills-${item.title}-${i}`}>
-            <List m={0} p={0} listStyleType="none">
+            <List listStyleType="none">
               <ListItem
                 data-sal="slide-up"
                 data-sal-delay={item.delay}
                 data-sal-easing="ease"
               >
-                <Heading mb={1}>
-                  <RenderIcon iconname={item.iconName} />
-                  <Box as="span" ml={2}>
-                    {item.title}
-                  </Box>
+                <Heading
+                  size="md"
+                  color="#36382E"
+                  fontFamily="Inter"
+                  data-sal="slide-left"
+                  data-sal-delay={data.nodes[0].delay}
+                  data-sal-easing="ease"
+                  mb={1}
+                >
+                  <Flex align="center">
+                    <RenderIcon iconname={item.iconName} />
+                    <Box ml={2} as="span">
+                      {item.title}
+                    </Box>
+                  </Flex>
                 </Heading>
 
                 {item.skills.map((skill: { title: string }, d: number) => (
                   <Badge
+                    p={1}
                     key={`MySkills-${skill.title}-${d}`}
-                    variant="outline"
+                    variant="subtle"
                     m={[0, 1]}
                     ml={[1, null, null, null]}
                   >
-                    <Box as="small">{skill.title}</Box>
+                    <Text as="small" color="red">
+                      {skill.title}
+                    </Text>
                   </Badge>
                 ))}
               </ListItem>

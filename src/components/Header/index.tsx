@@ -26,7 +26,6 @@ const HeaderNew = () => {
             }}
             aria-label={id}
             onClick={onClick}
-            selected={selected}
           >
             {id}
           </Link>

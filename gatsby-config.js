@@ -4,6 +4,7 @@ module.exports = {
     title: `My Portfolio Site`,
     description: `Contains my projects, skills, a little about me, and contact information`,
     author: `Corey Burns`,
+    subheading: "Full-Stack Developer",
     contact: [
       { name: `Email`, link: `coreyburns@outlook.com` },
       { name: `GitHub`, link: `https://github.com/burnsco` },
@@ -14,7 +15,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-smoothscroll`,
-    `gatsby-plugin-chakra-ui`,
     `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-preload-link-crossorigin`,

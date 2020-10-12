@@ -39,8 +39,9 @@ const Hero: React.FC<{ title: string }> = ({ title }) => {
           Corey Burns
         </Heading>
         <Heading
-          mb={4}
+          color="white"
           fontFamily="Inter"
+          mb={4}
           size="md"
           letterSpacing="tight"
           fontWeight="500"

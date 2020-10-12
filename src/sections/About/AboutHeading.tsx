@@ -1,4 +1,4 @@
-import { Heading, PseudoBox } from "@chakra-ui/core"
+import { Box, Heading } from "@chakra-ui/core"
 import * as React from "react"
 
 const AboutHeading = () => (
@@ -13,7 +13,7 @@ const AboutHeading = () => (
     fontWeight="900"
     my={2}
   >
-    <PseudoBox
+    <Box
       _hover={{ backgroundSize: "100% 88%" }}
       color="#36382E"
       backgroundImage="
@@ -24,7 +24,7 @@ const AboutHeading = () => (
       transition="background-size 0.25s ease-in"
     >
       About
-    </PseudoBox>
+    </Box>
   </Heading>
 )
 
