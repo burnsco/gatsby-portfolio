@@ -10,7 +10,6 @@ const SectionHeading: React.FC<{ title: string }> = ({ title }) => {
       color="blackolive"
       overflow="hidden"
       textAlign="center"
-      fontSize={[6, 7, 8]}
       fontFamily="Roboto Slab"
       fontWeight="900"
       my={2}

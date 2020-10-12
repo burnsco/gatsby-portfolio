@@ -9,7 +9,6 @@ const AboutHeading = () => (
     color="blackolive"
     overflow="hidden"
     textAlign="center"
-    fontSize={[7, 8]}
     fontFamily="Roboto Slab"
     fontWeight="900"
     my={2}

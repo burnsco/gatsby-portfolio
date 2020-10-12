@@ -40,7 +40,7 @@ export default function MySkills() {
                 data-sal-delay={item.delay}
                 data-sal-easing="ease"
               >
-                <Heading fontSize={[2, 3]} mb={1}>
+                <Heading mb={1}>
                   <RenderIcon iconname={item.iconName} />
                   <Box as="span" ml={2}>
                     {item.title}
@@ -54,9 +54,7 @@ export default function MySkills() {
                     m={[0, 1]}
                     ml={[1, null, null, null]}
                   >
-                    <Box as="small" fontSize={["8px", "10px"]}>
-                      {skill.title}
-                    </Box>
+                    <Box as="small">{skill.title}</Box>
                   </Badge>
                 ))}
               </ListItem>

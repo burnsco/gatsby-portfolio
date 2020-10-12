@@ -16,14 +16,8 @@ module.exports = {
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-chakra-ui`,
     `gatsby-plugin-scroll-reveal`,
+    `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-preload-link-crossorigin`,
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Inter:400,500,700,900,`, `Roboto Slab:900`],
-        display: "swap"
-      }
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

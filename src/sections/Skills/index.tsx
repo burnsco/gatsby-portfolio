@@ -11,7 +11,6 @@ const Skills: React.FC<{ title: string }> = ({ title }) => {
     <SectionContainer id={title} aria-label={title}>
       <Box>
         <SectionHeading title="Skills" />
-
         <Grid
           gap={2}
           mb={[4, 5, 6]}
@@ -20,7 +19,6 @@ const Skills: React.FC<{ title: string }> = ({ title }) => {
           <Box>
             <DeveloperInfo />
           </Box>
-
           <Box>
             <MySkills />
           </Box>

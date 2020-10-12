@@ -21,13 +21,13 @@ export default function RandomFacts() {
 
   return (
     <Box>
-      <Heading fontSize={[2, 3]} mb={2}>
+      <Heading mb={2}>
         <RenderIcon iconname={data.nodes[0].iconName} />
         <Box as="span" ml={2}>
           {data.nodes[0].title}
         </Box>
       </Heading>
-      <List m={0} p={0} fontSize={[0, 1, 2]}>
+      <List m={0} p={0}>
         {data.nodes[0].facts.map((fact: { title: string }, i: number) => (
           <ListItem
             data-sal="slide-up"

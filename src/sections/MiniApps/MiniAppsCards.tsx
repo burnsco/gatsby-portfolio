@@ -60,7 +60,7 @@ export default function MiniAppsCards() {
             flexDirection="column"
             key={`mini-apps-${app.title}-${i}`}
           >
-            <Heading textAlign="center" fontSize={[1, 2, 3]} p={1}>
+            <Heading textAlign="center" p={1}>
               {app.title}
             </Heading>
 
@@ -71,14 +71,13 @@ export default function MiniAppsCards() {
               fluid={{ ...app.image.childImageSharp.fluid, aspectRatio: 1 }}
             />
 
-            <Box fontSize={[0, 1]} p={1} flexGrow={2}>
+            <Box p={1} flexGrow={2}>
               {app.excerpt}
             </Box>
 
             <Flex mt={1} justifyContent="space-evenly">
               <Link href={app.gitUrl} target="_blank" rel="noopener noreferrer">
                 <Button
-                  fontSize={[0, 1]}
                   fontWeight="500"
                   backgroundColor="white"
                   color="text"
@@ -98,7 +97,6 @@ export default function MiniAppsCards() {
                 color="background"
               >
                 <Button
-                  fontSize={[0, 1]}
                   fontWeight="500"
                   backgroundColor="white"
                   color="text"

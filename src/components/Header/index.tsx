@@ -12,12 +12,11 @@ const HeaderNew = () => {
         role="navigation"
         justifyContent="space-evenly"
         alignItems="center"
-        p={[1, 2, 3]}
+        p={[2, 3]}
       >
         {sections.map(({ id, onClick, selected }) => (
           <Link
             key={`section-${id}-link`}
-            fontSize={[0, 1, 2]}
             color={selected ? `accent3` : `white`}
             fontWeight="500"
             _hover={{

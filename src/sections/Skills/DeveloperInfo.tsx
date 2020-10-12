@@ -26,7 +26,6 @@ export default function DeveloperInfo() {
           data-sal="slide-left"
           data-sal-delay={data.nodes[0].delay}
           data-sal-easing="ease"
-          fontSize={[2, 3]}
           mb={2}
         >
           <RenderIcon iconname={data.nodes[0].iconName} />
@@ -36,9 +35,7 @@ export default function DeveloperInfo() {
         </Heading>
 
         {data.nodes[0].excerpt.map((paragraph: { text: string }, i: number) => (
-          <Text key={`DeveloperInfo-Paragraph-${i}`} fontSize={[0, 1]}>
-            {paragraph.text}
-          </Text>
+          <Text key={`DeveloperInfo-Paragraph-${i}`}>{paragraph.text}</Text>
         ))}
       </Flex>
     </Box>

@@ -16,12 +16,7 @@ const TextSocials = () => {
   `)
 
   return (
-    <Flex
-      width="100%"
-      fontSize={[0, 1, 2]}
-      justifyContent="space-evenly"
-      mt={2}
-    >
+    <Flex width="100%" justifyContent="space-evenly" mt={2}>
       {data.nodes.map((item: { title: string; url: string }, i: number) => (
         <Link
           key={`TextSocials-${item}-${i}`}

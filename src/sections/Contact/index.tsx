@@ -24,7 +24,6 @@ const Contact: React.FC<{ title: string }> = ({ title }) => {
         >
           <Heading
             display="flex"
-            fontSize={[7, 8]}
             fontFamily="Roboto Slab"
             color="white"
             width="100"

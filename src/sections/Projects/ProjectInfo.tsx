@@ -15,22 +15,17 @@ const ProjectInfo: React.FC<{
   }[]
 }> = ({ description, webUrl, gitUrl, title, builtWith }) => {
   return (
-    <Flex flexDirection="column" fontSize={[0, 1]}>
+    <Flex flexDirection="column">
       <Flex my={2}>
         <Heading color="black" fontWeight="800">
-          <Box as="span" color="blackolive">
+          <Box as="span" color="black">
             {title}
           </Box>
         </Heading>
       </Flex>
       <Flex my={[1, 2]} flexWrap="wrap">
         {builtWith.map((item, i) => (
-          <Box
-            as="span"
-            key={`BuiltWith-${item.title}-${i}`}
-            ml={2}
-            fontSize={[0, 1, 2, 3]}
-          >
+          <Box as="span" key={`BuiltWith-${item.title}-${i}`} ml={2}>
             <RenderIcon iconname={item.iconName} />
           </Box>
         ))}
@@ -48,7 +43,6 @@ const ProjectInfo: React.FC<{
           color="background"
         >
           <Button
-            fontSize={[0, 1]}
             backgroundColor="white"
             alignSelf="flex-start"
             border="2px solid #e7e7e7"
@@ -68,7 +62,6 @@ const ProjectInfo: React.FC<{
           color="background"
         >
           <Button
-            fontSize={[0, 1]}
             backgroundColor="white"
             color="text"
             alignSelf="flex-start"

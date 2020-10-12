@@ -15,7 +15,7 @@ const Footer = () => (
 
     <Box color="light" p={2} mt={3}>
       Corey Burns
-      <Box as="span" color="persianred" fontSize="0">
+      <Box as="span" color="persianred">
         © {new Date().getFullYear()}
       </Box>
     </Box>

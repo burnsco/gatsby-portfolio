@@ -24,7 +24,6 @@ export default function AboutMe() {
         data-sal="slide-right"
         data-sal-delay={data.nodes[0].delay}
         data-sal-easing="ease"
-        fontSize={[2, 3]}
         mb={2}
       >
         <RenderIcon iconname={data.nodes[0].iconName} />
@@ -34,9 +33,7 @@ export default function AboutMe() {
       </Heading>
 
       {data.nodes[0].excerpt.map((paragraph: { text: string }, i: number) => (
-        <Box key={`p-${paragraph}-${i}`} fontSize={[0, 1]}>
-          {paragraph.text}
-        </Box>
+        <Box key={`p-${paragraph}-${i}`}>{paragraph.text}</Box>
       ))}
     </Flex>
   )
