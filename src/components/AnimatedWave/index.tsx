@@ -1,11 +1,7 @@
 import React from "react"
 import { InnerWave, WaveWrapper } from "./styles"
 
-type WaveProps = {
-  bottom: boolean
-}
-
-const AnimatedWave = (props: WaveProps) => {
+const AnimatedWave = () => {
   return (
     <WaveWrapper bottom>
       <InnerWave layer="1" waveoffset="-1.5vh">
