@@ -1,20 +1,36 @@
 import { extendTheme } from "@chakra-ui/core"
-import { mode } from "@chakra-ui/theme-tools"
 
 const customTheme = extendTheme({
   styles: {
     global: props => ({
-      body: {
-        color: mode("gray.700", "whiteAlpha.900")(props),
+      "html, body": {
+        fontSize: "md",
         fontFamily: "Inter, sans-serif",
-        ".deleted": {
-          color: "#ff8383 !important",
-          fontStyle: "normal !important"
-        },
-        ".inserted": {
-          color: "#b5f4a5 !important",
-          fontStyle: "normal !important"
-        }
+        color: props.colorMode === "dark" ? "white" : "gray.600",
+        lineHeight: "tall"
+      },
+      ".headroom": {
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 9999
+      },
+      ".headroom--unfixed": {
+        backgroundColor: "#292a2d",
+        position: "relative",
+        transform: "translateY(0)"
+      },
+      ".headroom--scrolled": {
+        transition: "transform 200ms ease-in-out"
+      },
+      ".headroom--unpinned": {
+        position: "fixed",
+        transform: "translateY(-100%)"
+      },
+      ".headroom--pinned": {
+        backgroundColor: "#292a2d",
+        position: "fixed",
+        transform: "translateY(0%)"
       }
     })
   },

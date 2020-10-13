@@ -49,7 +49,7 @@ const Hero: React.FC<{ title: string }> = ({ title }) => {
           Full-stack Developer
         </Heading>
         <SocialIcons />
-        <AnimatedWave />
+        <AnimatedWave bottom />
       </Flex>
     </SectionContainer>
   )

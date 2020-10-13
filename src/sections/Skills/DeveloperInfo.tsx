@@ -31,10 +31,12 @@ export default function DeveloperInfo() {
           data-sal-easing="ease"
           mb={2}
         >
-          <RenderIcon iconname={data.nodes[0].iconName} />
-          <Box as="span" ml={2}>
-            {data.nodes[0].title}
-          </Box>
+          <Flex align="center">
+            <RenderIcon iconname={data.nodes[0].iconName} />
+            <Box as="span" ml={2}>
+              {data.nodes[0].title}
+            </Box>
+          </Flex>
         </Heading>
 
         {data.nodes[0].excerpt.map((paragraph: { text: string }, i: number) => (

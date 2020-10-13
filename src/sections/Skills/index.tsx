@@ -10,11 +10,7 @@ const Skills: React.FC<{ title: string }> = ({ title }) => {
   return (
     <SectionContainer id={title} aria-label={title} bg="#FFFFFF">
       <SectionHeading title="Skills" />
-      <Grid
-        gap={4}
-        mb={[4, 5, 6]}
-        gridTemplateColumns="repeat(auto-fit, minmax(320px, 1fr))"
-      >
+      <Grid gap={4} gridTemplateColumns="repeat(auto-fit, minmax(320px, 1fr))">
         <Box>
           <DeveloperInfo />
         </Box>

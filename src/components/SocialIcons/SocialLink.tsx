@@ -7,7 +7,7 @@ const SocialLink: React.FC<{
   children: React.ReactNode
 }> = ({ name, url, children }) => {
   return (
-    <Tooltip label={name} placement="bottom" aria-label={name}>
+    <Tooltip label={name} bg="#FF521B" placement="bottom" aria-label={name}>
       <Link
         transformOrigin="translate(-50%,-50%)"
         transform="translate(-50%,-50%)"
@@ -16,7 +16,6 @@ const SocialLink: React.FC<{
         display="flex"
         justifyContent="center"
         alignItems="center"
-        color="#fff"
         border="2px solid"
         borderColor="#666"
         background="#3b3d42"

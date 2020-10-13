@@ -1,9 +1,9 @@
 import { Flex, Link } from "@chakra-ui/core"
 import * as React from "react"
 import { useScrollSections } from "react-scroll-section"
-import HeaderContainer from "./HeaderContainer"
+import HeaderContainer from "./Container"
 
-const HeaderNew = () => {
+const Header = () => {
   const sections = useScrollSections()
   return (
     <HeaderContainer>
@@ -35,4 +35,4 @@ const HeaderNew = () => {
   )
 }
 
-export default HeaderNew
+export default Header

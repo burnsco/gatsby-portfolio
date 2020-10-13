@@ -1,9 +1,13 @@
 import React from "react"
 import { InnerWave, WaveWrapper } from "./styles"
 
-const AnimatedWave = () => {
+type WaveProps = {
+  bottom: boolean
+}
+
+const AnimatedWave = (props: WaveProps) => {
   return (
-    <WaveWrapper bottom>
+    <WaveWrapper bottom={props.bottom}>
       <InnerWave layer="1" waveoffset="-1.5vh">
         <svg
           xmlns="http://www.w3.org/2000/svg"
