@@ -1,11 +1,10 @@
 /** @jsx jsx */
-import { jsx, Box, Grid } from 'theme-ui'
 import PropTypes from 'prop-types'
+import { Box, Grid, jsx } from 'theme-ui'
 import SectionContainer from '../Container/SectionContainer'
-
+import SectionHeading from '../Container/SectionHeading'
 import DeveloperInfo from './DeveloperInfo'
 import MySkills from './MySkills'
-import SectionHeading from '../Container/SectionHeading'
 
 const Skills = ({ title }) => (
   <SectionContainer id={title} aria-label={title}>

@@ -1,45 +1,42 @@
 /** @jsx jsx */
-import { jsx, Flex, NavLink } from 'theme-ui'
-import { SectionLink } from 'react-scroll-section'
+import { useScrollSections } from 'react-scroll-section'
+import { Flex, jsx, NavLink } from 'theme-ui'
 import HeaderContainer from './HeaderContainer'
 
-const sections = ['Home', 'Skills', 'Projects', 'About', 'Contact']
+export default function HeaderNew() {
+  const sections = useScrollSections()
 
-const HeaderNew = () => (
-  <HeaderContainer>
-    <Flex
-      as="nav"
-      role="navigation"
-      sx={{
-        justifyContent: 'space-evenly',
-        alignItems: 'center',
-        p: [1, 2, 3],
-      }}
-    >
-      {sections.map(section => (
-        <SectionLink section={section} key={`${section}`}>
-          {({ onClick, isSelected }) => (
-            <NavLink
-              sx={{
-                fontSize: [0, 1, 2],
-                color: isSelected ? `accent3` : `white`,
-                fontWeight: 500,
-                ':hover': {
-                  cursor: 'pointer',
-                },
-                fontColor: isSelected && `accent4`,
-              }}
-              aria-label={section}
-              onClick={onClick}
-              selected={isSelected}
-            >
-              {section}
-            </NavLink>
-          )}
-        </SectionLink>
-      ))}
-    </Flex>
-  </HeaderContainer>
-)
-
-export default HeaderNew
+  return (
+    <HeaderContainer>
+      <Flex
+        as="nav"
+        role="navigation"
+        sx={{
+          justifyContent: 'space-evenly',
+          alignItems: 'center',
+          p: [1, 2, 3],
+        }}
+      >
+        {sections.map(({ id, onClick, selected }) => (
+          <NavLink
+            id={id}
+            selected={selected}
+            sx={{
+              fontSize: [0, 1, 2],
+              color: selected ? `accent3` : `white`,
+              fontWeight: 500,
+              ':hover': {
+                cursor: 'pointer',
+              },
+              fontColor: selected && `accent4`,
+            }}
+            aria-label={id}
+            onClick={onClick}
+          >
+            {id}
+          </NavLink>
+        ))}
+      </Flex>
+    </HeaderContainer>
+  )
+}
