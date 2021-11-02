@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://portfolio.coreyburns.dev`,
+    siteUrl: `https://coreyburns.dev`,
     title: `My Portfolio Site`,
     description: `Contains my projects, skills, a little about me, and contact information`,
     author: `Corey Burns`,
     contact: [
-      { name: `Email`, link: `coreymburns@gmail.com` },
+      { name: `Email`, link: `coreyburns@outlook.com` },
       { name: `GitHub`, link: `https://github.com/burnsco` },
       { name: `Telegram`, link: `http://telegram.com` },
       { name: `ICQ`, link: `http://icq.com` },
@@ -15,6 +15,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-scroll-reveal`,
+    `gatsby-plugin-preload-link-crossorigin`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -38,6 +39,7 @@ module.exports = {
         defaultQuality: 75,
       },
     },
+    `gatsby-plugin-netlify-cache`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -1,10 +1,11 @@
 /** @jsx jsx */
+import { jsx, Flex, Heading, Image } from 'theme-ui'
 import PropTypes from 'prop-types'
-import { Flex, Heading, Image, jsx } from 'theme-ui'
-import Header from '../../components/Header'
-import SocialIcons from '../../components/SocialIcons'
 import avatar from '../../data/images/Me.jpg'
 import SectionContainer from '../Container/SectionContainer'
+import SocialIcons from '../../components/SocialIcons'
+import AnimatedWave from '../../components/AnimatedWave'
+import Header from '../../components/Header'
 
 const Hero = ({ title }) => (
   <SectionContainer id={title} aria-label={title}>
@@ -40,6 +41,7 @@ const Hero = ({ title }) => (
       <Heading variant="textStyles.display">Corey Burns</Heading>
       <Heading variant="textStyles.subDisplay">Full-stack Developer</Heading>
       <SocialIcons />
+      <AnimatedWave enableWave bottom />
     </Flex>
   </SectionContainer>
 )
