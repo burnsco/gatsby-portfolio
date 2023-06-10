@@ -20,7 +20,7 @@
     "@iconify/icons-whh": "^1.0.3",
     "@iconify/react": "^2.0.0-beta.2",
     "@tippyjs/react": "^4.1.0",
-    "gatsby": "^2.24.14",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.4.14",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^2.4.21",
